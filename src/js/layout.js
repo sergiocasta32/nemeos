@@ -8,6 +8,9 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
+import { Calendar } from "./component/calendar";
+import { RingChart } from "./component/ringchart";
+import { LineChart } from "./component/linechart";
 import { Footer } from "./component/footer";
 
 //create your first component
@@ -17,16 +20,15 @@ export const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div className="d-flex flex-column h-100">
+		<div className="d-flex flex-column h-auto" style={{ overflow: "scroll" }}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route path="/demo" component={Demo} />
-						<Route path="/single/:theid" component={Single} />
-						<Route render={() => <h1>Not found!</h1>} />
-					</Switch>
+					<Calendar />
+					<div className="container-fluid d-flex justify-content-center mt-4 ">
+						<RingChart />
+						<LineChart />
+					</div>
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>

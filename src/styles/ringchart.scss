@@ -1,0 +1,102 @@
+body {
+    background-color: #000
+}
+
+.padding {
+    padding: 5rem !important
+}
+.s{
+    width: 15%;
+    
+}
+
+.card {
+    border: 0;
+    border-radius: 0px;
+    
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
+    -webkit-transition: .5s;
+    transition: .5s
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+}
+
+.card-header {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(77, 82, 89, 0.07)
+}
+
+.card-header .card-title {
+    padding: 0;
+    border: none
+}
+
+h5.card-title {
+    font-size: 15px
+}
+
+.card-controls {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    flex-direction: row-reverse
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    padding-bottom: 7.75rem
+}
+
+.py-20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none
+}
+
+.flexbox {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between
+}
+
+.mb-1 {
+    margin-bottom: .25rem !important
+}
+
+.badge-dot.badge-lg {
+    width: 10px;
+    height: 10px
+}
+
+.badge:empty {
+    display: inline-block;
+    vertical-align: inherit
+}
+
+h5,
+span {
+    font-family: Roboto, sans-serif !important;
+    font-weight: 300;
+    font-size: 13px
+}
