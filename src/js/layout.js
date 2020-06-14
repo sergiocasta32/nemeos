@@ -5,7 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
-import { SignIn } from "./views/signIn";
+import { Sign } from "./views/sign";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -18,6 +18,21 @@ export const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
+		// <div className="d-flex flex-column h-100">
+		// 	<BrowserRouter basename={basename}>
+		// 		<ScrollToTop>
+		// 			<Navbar />
+		// 			<Switch>
+		// 				<Route exact path="/" component={Home} />
+		// 				<Route path="/demo" component={Demo} />
+		// 				<Route path="/signin" component={SignIn} />
+		// 				<Route path="/single/:theid" component={Single} />
+		// 				<Route render={() => <h1>Not found!</h1>} />
+		// 			</Switch>
+		// 			<Footer />
+		// 		</ScrollToTop>
+		// 	</BrowserRouter>
+		// </div>
 		<div className="d-flex flex-column h-100">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
@@ -25,7 +40,7 @@ export const Layout = () => {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/demo" component={Demo} />
-						<Route path="/signin" component={SignIn} />
+						<Route path="/sign" component={Sign} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
