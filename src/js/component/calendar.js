@@ -12,7 +12,7 @@ export const Calendar = () => {
 				</h1>
 				<p>2020</p>
 			</div>
-			<div className="calendar">
+			<div className="calendar container">
 				<span className="day-name">Mon</span>
 				<span className="day-name">Tue</span>
 				<span className="day-name">Wed</span>

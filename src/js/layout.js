@@ -9,7 +9,10 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Calendar } from "./component/calendar";
+import { Calendar2 } from "./component/calendar2";
 import { RingChart } from "./component/ringchart";
+import { RingChart2 } from "./component/ringchart2";
+import { LineChart2 } from "./component/linechart2";
 import { LineChart } from "./component/linechart";
 import { Footer } from "./component/footer";
 
@@ -25,9 +28,10 @@ export const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Calendar />
-					<div className="container-fluid d-flex justify-content-center mt-4 ">
-						<RingChart />
-						<LineChart />
+
+					<div className="row container-fluid d-flex justify-content-center mt-4 ">
+						<RingChart2 className="col-6" />
+						<LineChart2 className="col-6" />
 					</div>
 					<Footer />
 				</ScrollToTop>

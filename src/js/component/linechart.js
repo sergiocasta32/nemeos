@@ -48,7 +48,7 @@ export const LineChart = () => {
 
 	return (
 		<div className="page-content page-container" id="page-content">
-			<div className="container-fluid d-flex">
+			<div className="container-fluid d-flex col-sm-12">
 				<div className="co">
 					<div className="card">
 						<div className="card-header">Gráfica de nutrientes</div>

@@ -3,9 +3,9 @@ import "../../styles/ringchart.scss";
 
 export const RingChart = () => {
 	return (
-		<div className="s">
-			<div className="c">
-				<div className="card">
+		<div className="s container">
+			<div className="c container">
+				<div className="card col-sm-12">
 					<div className="card-header">
 						<h5 className="card-title">
 							Cantidad de <strong>Nutrientes</strong>
