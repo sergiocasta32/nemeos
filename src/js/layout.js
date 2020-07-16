@@ -3,18 +3,20 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
+
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Calendar } from "./component/calendar";
 import { Calendar2 } from "./component/calendar2";
+
 import { RingChart } from "./component/ringchart";
 import { RingChart2 } from "./component/ringchart2";
 import { LineChart2 } from "./component/linechart2";
 import { LineChart } from "./component/linechart";
 import { Footer } from "./component/footer";
+import { Demo } from "./component/demo";
 
 //create your first component
 export const Layout = () => {
@@ -27,8 +29,7 @@ export const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
-					<Calendar />
-
+					<Demo />
 					<div className="row container-fluid d-flex justify-content-center mt-4 ">
 						<RingChart2 className="col-6" />
 						<LineChart2 className="col-6" />

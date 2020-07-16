@@ -10,6 +10,17 @@ import "../styles/index.scss";
 
 //import your own components
 import Layout from "./layout";
+import "devextreme/dist/css/dx.common.css";
+import "devextreme/dist/css/dx.light.css";
+import Demo from "./component/demo";
+import DemoChart from "./component/demoChart";
+import Paper from "@material-ui/core/Paper";
 
 //render your react application
-ReactDOM.render(<Layout />, document.querySelector("#app"));
+ReactDOM.render(
+	<div>
+		<Demo />
+		<DemoChart />
+	</div>,
+	document.querySelector("#app")
+);
