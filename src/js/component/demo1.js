@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Paper from "@material-ui/core/Paper";
 import TableCell from "@material-ui/core/TableCell";
 import { darken, fade, lighten } from "@material-ui/core/styles/colorManipulator";
@@ -291,7 +292,7 @@ const FlexibleSpace = withStyles(styles, { name: "ToolbarRoot" })(({ classes, ..
 	</Toolbar.FlexibleSpace>
 ));
 
-export default class Demo extends React.PureComponent {
+export class Demo1 extends React.PureComponent {
 	// #FOLD_BLOCK
 	constructor(props) {
 		super(props);
@@ -312,9 +313,8 @@ export default class Demo extends React.PureComponent {
 				data = [...data, { id: startingAddedId, ...added }];
 			}
 			if (changed) {
-				data = data.map(
-					appointment =>
-						changed[appointment.id] ? { ...appointment, ...changed[appointment.id] } : appointment
+				data = data.map(appointment =>
+					changed[appointment.id] ? { ...appointment, ...changed[appointment.id] } : appointment
 				);
 			}
 			if (deleted !== undefined) {

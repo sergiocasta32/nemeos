@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Paper from "@material-ui/core/Paper";
 import {
@@ -142,7 +142,7 @@ const modifyPriceDomain = () => [0, 110];
 
 const getHoverIndex = ({ target }) => (target ? target.point : -1);
 
-export default class Demo extends React.PureComponent {
+export class DemoChart extends React.PureComponent {
 	constructor(props) {
 		super(props);
 
@@ -238,3 +238,11 @@ export default class Demo extends React.PureComponent {
 		);
 	}
 }
+
+/*
+DemoChart.propTypes = {
+	data,
+	text,
+	style
+};
+*/

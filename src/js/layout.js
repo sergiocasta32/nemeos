@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-
+import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -16,7 +16,7 @@ import { RingChart2 } from "./component/ringchart2";
 import { LineChart2 } from "./component/linechart2";
 import { LineChart } from "./component/linechart";
 import { Footer } from "./component/footer";
-import { Demo } from "./component/demo";
+import { LoginSergio } from "./component/loginsergio";
 
 //create your first component
 export const Layout = () => {
@@ -29,11 +29,13 @@ export const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
-					<Demo />
-					<div className="row container-fluid d-flex justify-content-center mt-4 ">
-						<RingChart2 className="col-6" />
-						<LineChart2 className="col-6" />
-					</div>
+					<LoginSergio />
+					<Switch>
+						<Route exact path="/" component={Home} />
+						<Route path="/demo" component={Demo} />
+						<Route path="/single" component={Single} />
+						<Route render={() => <h1>Not found!</h1>} />
+					</Switch>
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
