@@ -75,7 +75,7 @@ const appointments = [
 		title: "Meeting of Instructors",
 		startDate: new Date(2020, 5, 28, 12, 0),
 		endDate: new Date(2020, 5, 28, 12, 30),
-		rRule: "FREQ=WEEKLY;BYDAY=TH;UNTIL=20200727",
+		rRule: "FREQ=WEEKLY;BYDAY=TH;UNTIL=20200827",
 		exDate: "20200705T090000Z,20200719T090000Z",
 		ownerId: 5
 	},
@@ -350,3 +350,14 @@ export class Demo1 extends React.PureComponent {
 		);
 	}
 }
+WeatherIcon.propTypes = {
+	classes: PropTypes.array.isRequired,
+	id: PropTypes.number.isRequired
+};
+
+CellBase.propTypes = {
+	classes: PropTypes.array.isRequired,
+	startDate: PropTypes.string.isRequired,
+	formatDate: PropTypes.string.isRequired,
+	otherMonth: PropTypes.string.isRequired
+};

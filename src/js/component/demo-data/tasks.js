@@ -217,17 +217,17 @@ export const priorities = [
 
 export const owners = [
 	{
-		text: "Andrew Glover",
+		text: "Sergio Castañeda",
 		id: 1,
 		color: "#7E57C2"
 	},
 	{
-		text: "Arnie Schwartz",
+		text: "Luis Sánchez-Arévalo",
 		id: 2,
 		color: "#FF7043"
 	},
 	{
-		text: "John Heart",
+		text: "Victor Company",
 		id: 3,
 		color: "#E91E63"
 	},

@@ -239,10 +239,11 @@ export class DemoChart extends React.PureComponent {
 	}
 }
 
-/*
-DemoChart.propTypes = {
-	data,
-	text,
-	style
+AreaWithPoints.propTypes = {
+	state: PropTypes.array.isRequired
 };
-*/
+TooltipContent.propTypes = {
+	data: PropTypes.array.isRequired,
+	text: PropTypes.string.isRequired,
+	style: PropTypes.string.isRequired
+};
