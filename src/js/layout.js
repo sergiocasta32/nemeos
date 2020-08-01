@@ -16,6 +16,7 @@ import { RingChart2 } from "./component/ringchart2";
 import { LineChart2 } from "./component/linechart2";
 import { LineChart } from "./component/linechart";
 import { Footer } from "./component/footer";
+import { Demo1 } from "./component/demo1";
 import { LoginSergio } from "./component/loginsergio";
 
 //create your first component
@@ -29,7 +30,7 @@ export const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
-					<LoginSergio />
+					<Demo1 />
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/demo" component={Demo} />
