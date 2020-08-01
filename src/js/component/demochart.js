@@ -69,11 +69,11 @@ const SplineWithPoints = props => (
 );
 
 const series = [
-	{ name: "USA", key: "usa", color: "#08abbd" },
-	{ name: "Saudi Arabia", key: "saudiArabia", color: "#78bc97" },
-	{ name: "Iran", key: "iran", color: "#d4d67e" },
-	{ name: "Mexico", key: "mexico", color: "#9ccc65" },
-	{ name: "Russia", key: "russia", color: "#1698af" },
+	{ name: "Full Body Extreme", key: "usa", color: "#08abbd" },
+	{ name: "Cardio Speed 3.0", key: "saudiArabia", color: "#78bc97" },
+	{ name: "UpperBody Aniquilitaion", key: "iran", color: "#d4d67e" },
+	{ name: "LowerBody Destructor", key: "mexico", color: "#9ccc65" },
+	{ name: "RIPT Circuit", key: "russia", color: "#1698af" },
 	{
 		name: consumptionSeriesName,
 		key: "consumption",
@@ -81,7 +81,7 @@ const series = [
 		type: AreaSeries
 	},
 	{
-		name: "Oil Price",
+		name: "Kcal Burned",
 		key: "price",
 		color: priceColor,
 		scale: "price",
@@ -218,7 +218,7 @@ export class DemoChart extends React.PureComponent {
 					<ValueAxis scaleName="oil" labelComponent={LabelWithThousand} />
 					<ValueAxis scaleName="price" position="right" labelComponent={PriceLabel} />
 
-					<Title text="Oil production vs Oil price" />
+					<Title text="Kcal Consumidas vs Estimadas" />
 
 					{this.series}
 

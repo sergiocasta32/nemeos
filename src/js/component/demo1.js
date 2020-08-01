@@ -28,71 +28,71 @@ import { owners } from "./demo-data/tasks";
 const appointments = [
 	{
 		id: 0,
-		title: "Watercolor Landscape",
-		startDate: new Date(2020, 6, 23, 9, 30),
-		endDate: new Date(2020, 6, 23, 11, 30),
+		title: "AB Intervals",
+		startDate: new Date(2020, 7, 7, 9, 30),
+		endDate: new Date(2020, 7, 7, 10, 0),
 		ownerId: 1
 	},
 	{
 		id: 1,
-		title: "Monthly Planning",
-		startDate: new Date(2020, 5, 28, 9, 30),
-		endDate: new Date(2020, 5, 28, 11, 30),
+		title: "Core Cardio",
+		startDate: new Date(2020, 7, 28, 9, 30),
+		endDate: new Date(2020, 7, 28, 11, 30),
 		ownerId: 1
 	},
 	{
 		id: 2,
-		title: "Recruiting students",
-		startDate: new Date(2020, 6, 9, 12, 0),
-		endDate: new Date(2020, 6, 9, 13, 0),
+		title: "The Pyramid",
+		startDate: new Date(2020, 7, 9, 12, 0),
+		endDate: new Date(2020, 7, 9, 13, 0),
 		ownerId: 2
 	},
 	{
 		id: 3,
-		title: "Oil Painting",
-		startDate: new Date(2020, 6, 18, 14, 30),
-		endDate: new Date(2020, 6, 18, 15, 30),
+		title: "Dynamic Core",
+		startDate: new Date(2020, 7, 18, 14, 30),
+		endDate: new Date(2020, 7, 18, 15, 30),
 		ownerId: 2
 	},
 	{
 		id: 4,
-		title: "Open Day",
-		startDate: new Date(2020, 6, 20, 12, 0),
-		endDate: new Date(2020, 6, 20, 13, 35),
+		title: "RIPT Circuit",
+		startDate: new Date(2020, 7, 20, 12, 0),
+		endDate: new Date(2020, 7, 20, 13, 35),
 		ownerId: 6
 	},
 	{
 		id: 5,
-		title: "Watercolor Landscape",
-		startDate: new Date(2020, 6, 6, 13, 0),
-		endDate: new Date(2020, 6, 6, 14, 0),
-		rRule: "FREQ=WEEKLY;BYDAY=FR;UNTIL=20200816",
-		exDate: "20200713T100000Z,20200727T100000Z",
+		title: "Full Body Extreme",
+		startDate: new Date(2020, 7, 7, 13, 0),
+		endDate: new Date(2020, 7, 7, 14, 0),
+		rRule: "FREQ=WEEKLY;BYDAY=FR;UNTIL=20200831",
+		exDate: "20200807T100000Z,20200814T100000Z,20200821T100000Z",
 		ownerId: 2
 	},
 	{
 		id: 6,
-		title: "Meeting of Instructors",
-		startDate: new Date(2020, 5, 28, 12, 0),
-		endDate: new Date(2020, 5, 28, 12, 30),
+		title: "UpperBody Aniquilitaion",
+		startDate: new Date(2020, 7, 28, 12, 0),
+		endDate: new Date(2020, 7, 28, 12, 30),
 		rRule: "FREQ=WEEKLY;BYDAY=TH;UNTIL=20200827",
-		exDate: "20200705T090000Z,20200719T090000Z",
+		exDate: "20200805T090000Z,20200819T090000Z",
 		ownerId: 5
 	},
 	{
 		id: 7,
-		title: "Oil Painting for Beginners",
-		startDate: new Date(2020, 6, 3, 11, 0),
-		endDate: new Date(2020, 6, 3, 12, 0),
+		title: "Cardio Speed 3.0",
+		startDate: new Date(2020, 7, 3, 11, 0),
+		endDate: new Date(2020, 7, 3, 12, 0),
 		rRule: "FREQ=WEEKLY;BYDAY=TU;UNTIL=20200801",
 		exDate: "20200710T080000Z,20200724T080000Z",
 		ownerId: 3
 	},
 	{
 		id: 8,
-		title: "Watercolor Workshop",
-		startDate: new Date(2020, 6, 9, 11, 0),
-		endDate: new Date(2020, 6, 9, 12, 0),
+		title: "LowerBody Destructor",
+		startDate: new Date(2020, 7, 9, 11, 0),
+		endDate: new Date(2020, 7, 9, 12, 0),
 		ownerId: 3
 	}
 ];
@@ -284,9 +284,9 @@ const AppointmentContent = withStyles(styles, { name: "AppointmentContent" })(({
 const FlexibleSpace = withStyles(styles, { name: "ToolbarRoot" })(({ classes, ...restProps }) => (
 	<Toolbar.FlexibleSpace {...restProps} className={classes.flexibleSpace}>
 		<div className={classes.flexContainer}>
-			<ColorLens fontSize="large" htmlColor="#FF7043" />
+			<ColorLens fontSize="large" htmlColor="#439bff" />
 			<Typography variant="h5" style={{ marginLeft: "10px" }}>
-				Art School
+				Nemeos Calendar
 			</Typography>
 		</div>
 	</Toolbar.FlexibleSpace>
