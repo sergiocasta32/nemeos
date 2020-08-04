@@ -9,6 +9,9 @@ import classNames from "clsx";
 import {
 	Scheduler,
 	MonthView,
+	WeekView,
+	DayView,
+	ViewSwitcher,
 	Appointments,
 	Toolbar,
 	DateNavigator,
@@ -334,11 +337,14 @@ export class Demo1 extends React.PureComponent {
 					<ViewState defaultCurrentDate={this.currentDate} />
 
 					<MonthView timeTableCellComponent={TimeTableCell} dayScaleCellComponent={DayScaleCell} />
+					<WeekView startDayHour={10} endDayHour={19} />
+					<DayView startDayHour={9} endDayHour={18} />
 
 					<Appointments appointmentComponent={Appointment} appointmentContentComponent={AppointmentContent} />
 					<Resources data={resources} />
 
 					<Toolbar flexibleSpaceComponent={FlexibleSpace} />
+					<ViewSwitcher />
 					<DateNavigator />
 
 					<EditRecurrenceMenu />
