@@ -24,9 +24,10 @@ import {
 import WbSunny from "@material-ui/icons/WbSunny";
 import FilterDrama from "@material-ui/icons/FilterDrama";
 import Opacity from "@material-ui/icons/Opacity";
-import ColorLens from "@material-ui/icons/ColorLens";
+import ColorLens from "@material-ui/icons/FitnessCenter";
 import { withStyles } from "@material-ui/core/styles";
 import { owners } from "./demo-data/tasks";
+import { Icon } from "@material-ui/core";
 
 const appointments = [
 	{
@@ -164,6 +165,7 @@ const styles = theme => ({
 	rain: {
 		color: "#4FC3F7"
 	},
+	/*
 	sunBack: {
 		backgroundColor: "#FFFDE7"
 	},
@@ -172,7 +174,8 @@ const styles = theme => ({
 	},
 	rainBack: {
 		backgroundColor: "#E1F5FE"
-	},
+    },
+    */
 	opacity: {
 		opacity: "0.5"
 	},
@@ -216,7 +219,9 @@ const styles = theme => ({
 	},
 	icon: {
 		color: theme.palette.action.active,
-		verticalAlign: "middle"
+		verticalAlign: "middle",
+		horizontalAlign: "right",
+		fontSize: 200
 	},
 	circle: {
 		width: theme.spacing(4.5),
@@ -266,9 +271,8 @@ const CellBase = React.memo(({ classes, startDate, formatDate, otherMonth }) => 
 				[classes.cloudBack]: iconId === 2,
 				[classes.opacity]: otherMonth
 			})}>
-			<div className={classes.content}>
-				<WeatherIcon classes={classes} id={iconId} />
-			</div>
+			<div className={classes.content}></div>
+			<WeatherIcon classes={classes} id={iconId} />
 			<div className={classes.text}>{formatDate(startDate, formatOptions)}</div>
 		</TableCell>
 	);
@@ -287,7 +291,8 @@ const AppointmentContent = withStyles(styles, { name: "AppointmentContent" })(({
 const FlexibleSpace = withStyles(styles, { name: "ToolbarRoot" })(({ classes, ...restProps }) => (
 	<Toolbar.FlexibleSpace {...restProps} className={classes.flexibleSpace}>
 		<div className={classes.flexContainer}>
-			<ColorLens fontSize="large" htmlColor="#439bff" />
+			<Icon />
+			<ColorLens fontSize="large" htmlColor="#007bff" />
 			<Typography variant="h5" style={{ marginLeft: "10px" }}>
 				Nemeos Calendar
 			</Typography>

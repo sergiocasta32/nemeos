@@ -8,17 +8,12 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
-import { Calendar } from "./component/calendar";
-import { Calendar2 } from "./component/calendar2";
 
-import { RingChart } from "./component/ringchart";
-import { RingChart2 } from "./component/ringchart2";
-import { LineChart2 } from "./component/linechart2";
-import { LineChart } from "./component/linechart";
 import { Footer } from "./component/footer";
 import { Demo1 } from "./component/demo1";
 import { DemoChart } from "./component/demochart";
 import { LoginSergio } from "./component/loginsergio";
+import { DashBoard } from "./component/dashBoard";
 
 //create your first component
 export const Layout = () => {
@@ -30,14 +25,9 @@ export const Layout = () => {
 		<div className="d-flex flex-column h-auto" style={{ overflow: "scroll" }}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
-					<Demo1 />
-					<DemoChart />
 					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route path="/demo" component={Demo} />
-						<Route path="/single" component={Single} />
-						<Route render={() => <h1>Not found!</h1>} />
+						<Route exact path="/" component={LoginSergio} />
+						<Route path="/dashBoard" component={DashBoard} />
 					</Switch>
 					<Footer />
 				</ScrollToTop>

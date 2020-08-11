@@ -44,9 +44,9 @@ const getState = ({ getStore, setStore }) => {
 							sessionStorage.setItem("token", responseJson.access_token);
 							console.log("Manda token : " + store.token);
 
-							document.location.href = "/single";
+							document.location.href = "/dashBoard";
 							console.log("Guarda en el session : " + sessionStorage.token);
-							console.log("Manda token after /single : " + store.token);
+							console.log("Manda token after /dashBoard : " + store.token);
 						} else {
 							console.log("Error-------> :" + responseJson.access_token);
 						}
