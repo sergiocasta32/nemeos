@@ -24,7 +24,7 @@ const getState = ({ getStore, setStore }) => {
 			},
 			login: (email, password) => {
 				const store = getStore();
-				fetch("https://3000-d3112155-094b-4b43-ab8c-2139015b2329.ws-eu01.gitpod.io/login", {
+				fetch("https://3000-ade226da-0a6e-4ac8-aefa-797b85d798c4.ws-eu01.gitpod.io/login", {
 					method: "POST",
 					headers: {
 						"Access-Control-Allow-Origin": "*",
@@ -55,7 +55,7 @@ const getState = ({ getStore, setStore }) => {
 			isLogged: () => {
 				const store = getStore();
 				if (sessionStorage.token != null) {
-					fetch("https://3000-d3112155-094b-4b43-ab8c-2139015b2329.ws-eu01.gitpod.io/protected", {
+					fetch("https://3000-ade226da-0a6e-4ac8-aefa-797b85d798c4.ws-eu01.gitpod.io/protected", {
 						method: "GET",
 						headers: {
 							"Content-Type": "application/json",
