@@ -66,7 +66,7 @@ export class Sign extends React.Component {
 												</div>
 												<div className="group">
 													<input id="check" type="checkbox" className="check" />
-													<label htmlFor="check">
+													<label htmlFor="check" className="check-signed-in">
 														<span className="icon" /> Keep me Signed in
 													</label>
 												</div>

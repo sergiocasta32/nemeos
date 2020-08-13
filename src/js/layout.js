@@ -15,6 +15,7 @@ import { DemoChart } from "./component/demochart";
 import { LoginSergio } from "./component/loginsergio";
 import { DashBoard } from "./component/dashBoard";
 import { Sign } from "./views/sign";
+import { SignUpForm } from "./views/signUpForm";
 
 //create your first component
 export const Layout = () => {
@@ -26,6 +27,7 @@ export const Layout = () => {
 			<ScrollToTop>
 				<Switch>
 					<Route exact path="/" component={Sign} />
+					<Route path="/signUpForm" component={SignUpForm} />
 					<Route path="/dashBoard" component={DashBoard} />
 				</Switch>
 			</ScrollToTop>

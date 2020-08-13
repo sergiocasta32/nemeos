@@ -50,7 +50,12 @@ body {
 .login-snip .tab,
 .login-space .group .label,
 .login-space .group .button {
-    text-transform: uppercase
+    text-transform: uppercase;
+    cursor: pointer
+}
+
+.login-space .group .check-signed-in{
+    cursor: pointer
 }
 
 .login-snip .tab {
