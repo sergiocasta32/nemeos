@@ -27,12 +27,14 @@ import Opacity from "@material-ui/icons/Opacity";
 import ColorLens from "@material-ui/icons/FitnessCenter";
 import { withStyles } from "@material-ui/core/styles";
 import { owners } from "./demo-data/tasks";
-import { Icon } from "@material-ui/core";
+import { Icon, CardActionArea } from "@material-ui/core";
 
 const appointments = [
 	{
 		id: 0,
 		title: "AB Intervals",
+		price: 5,
+		exercises: ["cardio", "pesas"],
 		startDate: new Date(2020, 7, 7, 9, 30),
 		endDate: new Date(2020, 7, 7, 10, 0),
 		ownerId: 1

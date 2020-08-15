@@ -17,7 +17,10 @@ export class Sign extends React.Component {
 		super(props);
 
 		this.state = {
+			name: "",
+			last_name: "",
 			email: "",
+			phone: "",
 			password: ""
 		};
 	}
@@ -108,13 +111,50 @@ export class Sign extends React.Component {
 											<div className="sign-up-form">
 												<div className="group">
 													<label htmlFor="user" className="label">
-														Username
+														Name
 													</label>
 													<input
 														id="user"
 														type="text"
 														className="input"
 														placeholder="Create your Username"
+														onChange={e => this.setState({ name: e.target.value })}
+													/>
+												</div>
+												<div className="group">
+													<label htmlFor="lastName" className="label">
+														Last Name
+													</label>
+													<input
+														id="lastname"
+														type="text"
+														className="input"
+														placeholder="Enter your last name"
+														onSubmit={e => this.setState({ name: e.target.value })}
+													/>
+												</div>
+												<div className="group">
+													<label htmlFor="pass" className="label">
+														Email Address
+													</label>
+													<input
+														id="pass"
+														type="text"
+														className="input"
+														placeholder="Enter your email address"
+														onSubmit={e => this.setState({ email: e.target.value })}
+													/>
+												</div>
+												<div className="group">
+													<label htmlFor="phone" className="label">
+														Phone
+													</label>
+													<input
+														id="phone"
+														type="text"
+														className="input"
+														placeholder="Enter your phone number"
+														onSubmit={e => this.setState({ phone: e.target.value })}
 													/>
 												</div>
 												<div className="group">
@@ -127,33 +167,24 @@ export class Sign extends React.Component {
 														className="input"
 														data-type="password"
 														placeholder="Create your password"
+														onSubmit={e => this.setState({ password: e.target.value })}
 													/>
 												</div>
 												<div className="group">
-													<label htmlFor="pass" className="label">
-														Repeat Password
-													</label>
 													<input
-														id="pass"
-														type="password"
-														className="input"
-														data-type="password"
-														placeholder="Repeat your password"
+														type="submit"
+														className="button"
+														value="Sign Up"
+														onClick={() =>
+															actions.signUp(
+																this.state.name,
+																this.state.last_name,
+																this.state.email,
+																this.state.phone,
+																this.state.password
+															)
+														}
 													/>
-												</div>
-												<div className="group">
-													<label htmlFor="pass" className="label">
-														Email Address
-													</label>
-													<input
-														id="pass"
-														type="text"
-														className="input"
-														placeholder="Enter your email address"
-													/>
-												</div>
-												<div className="group">
-													<input type="submit" className="button" value="Sign Up" />
 												</div>
 												<div className="hr" />
 												<div className="foot">

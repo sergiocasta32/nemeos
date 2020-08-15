@@ -24,7 +24,7 @@ const getState = ({ getStore, setStore }) => {
 			},
 			login: (email, password) => {
 				const store = getStore();
-				fetch("https://3000-ade226da-0a6e-4ac8-aefa-797b85d798c4.ws-eu01.gitpod.io/login", {
+				fetch("https://3000-c022f75b-329b-48d5-8a8e-afbe639c484c.ws-eu01.gitpod.io/login", {
 					method: "POST",
 					headers: {
 						"Access-Control-Allow-Origin": "*",
@@ -67,6 +67,50 @@ const getState = ({ getStore, setStore }) => {
 					console.log("pero ka pachao!!");
 				}
 			},
+
+			// signUp: (name, lastname, email, phone, password) => {
+			// 	let access_token = localStorage.getItem("access_token");
+			// 	// fetch("https://3000-ade226da-0a6e-4ac8-aefa-797b85d798c4.ws-eu01.gitpod.io/user/create", {
+			// 	//     method: "POST",
+			// 	//     headers: {
+			// 	//         "Access-Control-Allow-Origin": "*",
+			// 	//         "Content-Type": "application/json"
+			// 	//         // add this to any fetch in headers  authorization: "Bearer " + store.token
+			// 	//     },
+
+			// 	//     body: JSON.stringify({
+			// 	//         name: name,
+			// 	//         last_name: lastname,
+			// 	//         email: email,
+			// 	//         phone: phone,
+			// 	//         password: password
+			// 	//     })
+			// 	// })
+			// 	var request = new Request(
+			// 		"https://3000-ade226da-0a6e-4ac8-aefa-797b85d798c4.ws-eu01.gitpod.io/user/create",
+			// 		{
+			// 			method: "POST",
+			// 			headers: {
+			// 				"Access-Control-Allow-Headers": "Content-Type",
+			// 				"Access-Control-Allow-Origin":
+			// 					"https://3000-ade226da-0a6e-4ac8-aefa-797b85d798c4.ws-eu01.gitpod.io/user/create",
+			// 				"Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+			// 				"Content-Type": "application/json"
+			// 			},
+			// 			body: JSON.stringify({
+			// 				name: name,
+			// 				last_name: lastname,
+			// 				email: email,
+			// 				phone: phone,
+			// 				password: password
+			// 			})
+			// 		}
+			// 	);
+			// 	fetch(request)
+			// 		.then(response => response.json())
+			// 		.then(responseJson => {});
+			// },
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

@@ -34,8 +34,8 @@ const makeLabel = (symbol, color) => ({ text, style, ...restProps }) => (
 		{...restProps}
 	/>
 );
-const PriceLabel = makeLabel("$", priceColor);
-const LabelWithThousand = makeLabel("k", consumptionColor);
+const PriceLabel = makeLabel("%", priceColor);
+const LabelWithThousand = makeLabel("Kcal", consumptionColor);
 
 const patchProps = ({ hoverIndex, ...props }) => ({
 	state: props.index === hoverIndex ? "hovered" : null,
@@ -137,8 +137,8 @@ const TooltipContent = ({ data, text, style, ...props }) => {
 
 const stacks = [{ series: series.filter(obj => !obj.type).map(obj => obj.name) }];
 
-const modifyOilDomain = domain => [domain[0], 2200];
-const modifyPriceDomain = () => [0, 110];
+const modifyOilDomain = domain => [domain[0], 2000];
+const modifyPriceDomain = () => [0, 100];
 
 const getHoverIndex = ({ target }) => (target ? target.point : -1);
 

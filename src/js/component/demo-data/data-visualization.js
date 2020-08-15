@@ -1097,7 +1097,7 @@ export const booksSale = [
 
 export const oilProduction = [
 	{
-		year: "1970",
+		year: "1975",
 		saudiArabia: 241.142,
 		usa: 482.15,
 		iran: 230.174,
@@ -1111,7 +1111,7 @@ export const oilProduction = [
 		usa: 437.343,
 		iran: 75.097,
 		mexico: 108.249,
-		price: 104,
+		price: 94,
 		consumption: 630
 	},
 	{
