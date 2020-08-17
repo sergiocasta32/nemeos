@@ -117,6 +117,9 @@ export const Nav = () => {
 	const handleGoToUser = event => {
 		document.location.href = "/userprofileview";
 	};
+	const handleGoToMain = event => {
+		document.location.href = "/dashboard";
+	};
 
 	return (
 		<div className={classes.root}>
@@ -136,9 +139,9 @@ export const Nav = () => {
 						className={clsx(classes.menuButton, openProfile)}>
 						<MenuIcon />
 					</IconButton>
-					<Typography variant="h6" Wrap>
+					<IconButton text="Nemeos" Wrap onClick={handleGoToMain} style={{ color: "white" }}>
 						Nemeos
-					</Typography>
+					</IconButton>
 					{auth && (
 						<Grid container alignItems="flex-start" justify="flex-end" direction="row">
 							<IconButton

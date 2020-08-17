@@ -27,7 +27,6 @@ export const Layout = () => {
 	return (
 		<BrowserRouter basename={basename}>
 			<ScrollToTop>
-				<Nav />
 				<Switch>
 					<Route exact path="/" component={Sign} />
 					<Route path="/signUpForm" component={SignUpForm} />
