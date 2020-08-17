@@ -16,6 +16,8 @@ import { LoginSergio } from "./component/loginsergio";
 import { DashBoard } from "./component/dashBoard";
 import { Sign } from "./views/sign";
 import { SignUpForm } from "./views/signUpForm";
+import { UserProfileView } from "./views/userprofileview";
+import { Nav } from "./component/navbarmenu";
 
 //create your first component
 export const Layout = () => {
@@ -25,10 +27,12 @@ export const Layout = () => {
 	return (
 		<BrowserRouter basename={basename}>
 			<ScrollToTop>
+				<Nav />
 				<Switch>
 					<Route exact path="/" component={Sign} />
 					<Route path="/signUpForm" component={SignUpForm} />
 					<Route path="/dashBoard" component={DashBoard} />
+					<Route path="/userprofileview" component={UserProfileView} />
 				</Switch>
 			</ScrollToTop>
 		</BrowserRouter>

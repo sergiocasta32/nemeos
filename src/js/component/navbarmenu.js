@@ -114,6 +114,10 @@ export const Nav = () => {
 		setAnchorEl(null);
 	};
 
+	const handleGoToUser = event => {
+		document.location.href = "/userprofileview";
+	};
+
 	return (
 		<div className={classes.root}>
 			<CssBaseline />
@@ -121,7 +125,8 @@ export const Nav = () => {
 				position="fixed"
 				className={clsx(classes.appBar, {
 					[classes.appBarShift]: open
-				})}>
+				})}
+				style={{ backgroundColor: "#007bff" }}>
 				<Toolbar>
 					<IconButton
 						color="inherit"
@@ -160,7 +165,7 @@ export const Nav = () => {
 								}}
 								open={openProfile}
 								onClose={handleClose}>
-								<MenuItem onClick={handleClose}>Profile</MenuItem>
+								<MenuItem onClick={handleGoToUser}>Profile</MenuItem>
 								<MenuItem onClick={handleClose}>My account</MenuItem>
 							</Menu>
 						</Grid>
@@ -204,12 +209,6 @@ export const Nav = () => {
 					[classes.contentShift]: open
 				})}>
 				<div className={classes.drawerHeader} />
-				<div className="divdashboard">
-					<Demo1 className="demoagenda" />
-				</div>
-				<div className="divchart">
-					<DemoChart className="demografica" />
-				</div>
 			</main>
 		</div>
 	);
