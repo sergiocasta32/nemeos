@@ -1,16 +1,12 @@
 import React, { Component } from "react";
-import { Demo1 } from "./demo1";
-import { DemoChart } from "./demochart";
-import { PieChartComponent } from "./pieChart";
+import { PieChartComponent } from "../component/pieChart";
 import { Nav } from "../component/navbarmenu";
 import "../../styles/dashboard.scss";
-export const DashBoard = () => {
+
+export const PieChartView = () => {
 	return (
 		<div className="dashboard">
 			<Nav />
-			<div className="divdashboard">
-				<Demo1 className="demoagenda" />
-			</div>
 			<div className="divpiechart">
 				<PieChartComponent />
 			</div>

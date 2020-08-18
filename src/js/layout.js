@@ -17,6 +17,7 @@ import { DashBoard } from "./component/dashBoard";
 import { Sign } from "./views/sign";
 import { SignUpForm } from "./views/signUpForm";
 import { UserProfileView } from "./views/userprofileview";
+import { PieChartView } from "./views/pieChartView";
 import { Nav } from "./component/navbarmenu";
 
 //create your first component
@@ -32,6 +33,7 @@ export const Layout = () => {
 					<Route path="/signUpForm" component={SignUpForm} />
 					<Route path="/dashBoard" component={DashBoard} />
 					<Route path="/userprofileview" component={UserProfileView} />
+					<Route path="/pieChartView" component={PieChartView} />
 				</Switch>
 			</ScrollToTop>
 		</BrowserRouter>

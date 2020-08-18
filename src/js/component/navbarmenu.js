@@ -117,6 +117,9 @@ export const Nav = () => {
 	const handleGoToUser = event => {
 		document.location.href = "/userprofileview";
 	};
+	const handleGoToChart = event => {
+		document.location.href = "/pieChartView";
+	};
 	const handleGoToMain = event => {
 		document.location.href = "/dashboard";
 	};
@@ -139,7 +142,7 @@ export const Nav = () => {
 						className={clsx(classes.menuButton, openProfile)}>
 						<MenuIcon />
 					</IconButton>
-					<IconButton text="Nemeos" Wrap onClick={handleGoToMain} style={{ color: "white" }}>
+					<IconButton text="Nemeos" wrap onClick={handleGoToMain} style={{ color: "white" }}>
 						Nemeos
 					</IconButton>
 					{auth && (
@@ -199,12 +202,12 @@ export const Nav = () => {
 				</List>
 				<Divider />
 				<List>
-					{["All mail", "Trash", "Spam"].map((text, index) => (
-						<ListItem button key={text}>
-							<ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-							<ListItemText primary={text} />
-						</ListItem>
-					))}
+					<ListItem onClick={handleGoToChart}>
+						<ListItemIcon>
+							<InboxIcon></InboxIcon>
+						</ListItemIcon>
+						<ListItemText primary={"Chart"} />
+					</ListItem>
 				</List>
 			</Drawer>
 			<main

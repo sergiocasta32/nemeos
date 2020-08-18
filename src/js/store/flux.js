@@ -46,7 +46,7 @@ const getState = ({ getStore, setStore }) => {
 					]
 				},
 				dataProjects: {
-					labels: ["Data1", "Data2", "Data3", "Data4", "Data5"],
+					labels: ["Data6", "Data7", "Data8", "Data9", "Data10"],
 					datasets: [
 						{
 							data: [20, 30, 40, 50, 60],
@@ -57,7 +57,7 @@ const getState = ({ getStore, setStore }) => {
 					]
 				},
 				dataContact: {
-					labels: ["Data1", "Data2", "Data3", "Data4", "Data5"],
+					labels: ["Data11", "Data12", "Data13", "Data14", "Data15"],
 					datasets: [
 						{
 							data: [50, 60, 70, 80, 90],
