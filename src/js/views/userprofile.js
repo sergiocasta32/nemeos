@@ -1,59 +1,63 @@
-import React, { Component } from "react";
+import React, { Component, useContext, getStore } from "react";
+import { Context } from "../store/appContext";
 import { Nav } from "../component/navbarmenu";
 import "../../styles/userprofile.scss";
 
 export const UserProfile = () => {
-	(function() {
-		var colors = {
-			secondary: "#ed4e7c",
-			primary: "#36e2be"
+	const { store, actions } = useContext(Context);
+
+	function ready(fn) {
+		if (document.readyState != "loading") {
+			fn();
+		} else {
+			document.addEventListener("DOMContentLoaded", fn);
+		}
+	}
+
+	ready(function() {
+		console.log("Estoy aqui linea 11");
+
+		var radarOpts = {
+			pointLabelFontFamily: "'Roboto Condensed', 'Roboto', sans-serif",
+			pointLabelFontStyle: "300",
+			pointLabelFontSize: 14,
+			pointLabelFontColor: "white",
+			pointDotRadius: 4,
+			angleLineColor: "rgba(255,255,255,0.1)",
+			scaleLineColor: "rgba(255,255,255,0.1)",
+			scaleOverride: true,
+			scaleSteps: 2,
+			scaleStepWidth: 50,
+			showTooltips: false
 		};
 
-		function ready(fn) {
-			if (document.readyState != "loading") {
-				fn();
-			} else {
-				document.addEventListener("DOMContentLoaded", fn);
-			}
-		}
+		var ctx = document.getElementById("skills-radar").getContext("2d");
+		new Chart(ctx).Radar(store.dataProfile.dataOverview, radarOpts);
+	});
 
-		ready(function() {
-			var data = {
-				labels: [
-					"Intusion Prevention",
-					"Bug Detection",
-					"Computer Forensics",
-					"Network Security",
-					"Code Retirement"
-				],
-				datasets: [
-					{
-						data: [90, 70, 50, 35, 80],
-						fillColor: "transparent",
-						strokeColor: colors.secondary,
-						pointColor: colors.secondary
-					}
-				]
-			};
+	function chart() {
+		// TODO: Aqui se debe de analizar desde donde sellama a esta funcion "id" y hacer la llamada a la funcion ready pasandole el store del tipo de dato a mostrar ya almacenado en una variable
 
-			var radarOpts = {
-				pointLabelFontFamily: "'Roboto Condensed', 'Roboto', sans-serif",
-				pointLabelFontStyle: "300",
-				pointLabelFontSize: 14,
-				pointLabelFontColor: "white",
-				pointDotRadius: 4,
-				angleLineColor: "rgba(255,255,255,0.1)",
-				scaleLineColor: "rgba(255,255,255,0.1)",
-				scaleOverride: true,
-				scaleSteps: 2,
-				scaleStepWidth: 50,
-				showTooltips: false
-			};
+		console.log("Estoy aqui linea 11");
 
-			var ctx = document.getElementById("skills-radar").getContext("2d");
-			var radar = new Chart(ctx).Radar(data, radarOpts);
-		});
-	})();
+		var radarOpts = {
+			pointLabelFontFamily: "'Roboto Condensed', 'Roboto', sans-serif",
+			pointLabelFontStyle: "300",
+			pointLabelFontSize: 14,
+			pointLabelFontColor: "white",
+			pointDotRadius: 4,
+			angleLineColor: "rgba(255,255,255,0.1)",
+			scaleLineColor: "rgba(255,255,255,0.1)",
+			scaleOverride: true,
+			scaleSteps: 2,
+			scaleStepWidth: 50,
+			showTooltips: false
+		};
+
+		var ctx = document.getElementById("skills-radar").getContext("2d");
+		var radar = new Chart(ctx).Radar(store.dataProfile.dataProjects, radarOpts);
+	}
+
 	return (
 		<div className="main">
 			<div className="banner">
@@ -66,16 +70,16 @@ export const UserProfile = () => {
 			<div className="content">
 				<ul className="tabs">
 					<li className="tab selected">
-						<a>Overview</a>
+						<a onClick={chart}>Overview</a>
 					</li>
 					<li className="tab">
-						<a>Skills</a>
+						<a onClick={chart}>Skills</a>
 					</li>
 					<li className="tab">
-						<a>Projects</a>
+						<a onClick={chart}>Projects</a>
 					</li>
 					<li className="tab">
-						<a>Contact</a>
+						<a onClick={chart}>Contact</a>
 					</li>
 				</ul>
 				<div className="tab-panes">

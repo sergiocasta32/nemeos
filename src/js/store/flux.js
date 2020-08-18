@@ -15,7 +15,59 @@ const getState = ({ getStore, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			dataProfile: {
+				dataOverview: {
+					labels: [
+						"Intusion Prevention",
+						"Bug Detection",
+						"Computer Forensics",
+						"Network Security",
+						"Code Retirement"
+					],
+					datasets: [
+						{
+							data: [90, 70, 50, 35, 80],
+							fillColor: "transparent",
+							strokeColor: "#ed4e7c",
+							pointColor: "#ed4e7c"
+						}
+					]
+				},
+				dataSkills: {
+					labels: ["Data1", "Data2", "Data3", "Data4", "Data5"],
+					datasets: [
+						{
+							data: [10, 20, 30, 40, 50],
+							fillColor: "transparent",
+							strokeColor: "#ed4e7c",
+							pointColor: "#ed4e7c"
+						}
+					]
+				},
+				dataProjects: {
+					labels: ["Data1", "Data2", "Data3", "Data4", "Data5"],
+					datasets: [
+						{
+							data: [20, 30, 40, 50, 60],
+							fillColor: "transparent",
+							strokeColor: "#ed4e7c",
+							pointColor: "#ed4e7c"
+						}
+					]
+				},
+				dataContact: {
+					labels: ["Data1", "Data2", "Data3", "Data4", "Data5"],
+					datasets: [
+						{
+							data: [50, 60, 70, 80, 90],
+							fillColor: "transparent",
+							strokeColor: "#ed4e7c",
+							pointColor: "#ed4e7c"
+						}
+					]
+				}
+			}
 		},
 		actions: {
 			logout: () => {
