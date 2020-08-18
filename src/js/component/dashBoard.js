@@ -11,9 +11,6 @@ export const DashBoard = () => {
 			<div className="divdashboard">
 				<Demo1 className="demoagenda" />
 			</div>
-			<div className="divpiechart">
-				<PieChartComponent />
-			</div>
 		</div>
 	);
 };
