@@ -17,10 +17,13 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
+import { Icon, CardActionArea } from "@material-ui/core";
+import ColorLens from "@material-ui/icons/FitnessCenter";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import Grid from "@material-ui/core/Grid";
 import AccountCircle from "@material-ui/icons/AccountCircle";
+import nemeosLogo from "../../img/nemeostransparent1.png";
 import { Demo1 } from "./demo1";
 import { DemoChart } from "./demochart";
 
@@ -30,6 +33,7 @@ const useStyles = makeStyles(theme => ({
 	root: {
 		display: "flex"
 	},
+
 	appBar: {
 		transition: theme.transitions.create(["margin", "width"], {
 			easing: theme.transitions.easing.sharp,
@@ -132,7 +136,7 @@ export const Nav = () => {
 				className={clsx(classes.appBar, {
 					[classes.appBarShift]: open
 				})}
-				style={{ backgroundColor: "#007bff" }}>
+				style={{ backgroundColor: "#027fcb" }}>
 				<Toolbar>
 					<IconButton
 						color="inherit"
@@ -142,8 +146,8 @@ export const Nav = () => {
 						className={clsx(classes.menuButton, openProfile)}>
 						<MenuIcon />
 					</IconButton>
-					<IconButton text="Nemeos" wrap onClick={handleGoToMain} style={{ color: "white" }}>
-						Nemeos
+					<IconButton>
+						<img className="nemeoslogo" src={nemeosLogo} onClick={handleGoToMain}></img>
 					</IconButton>
 					{auth && (
 						<Grid container alignItems="flex-start" justify="flex-end" direction="row">

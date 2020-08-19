@@ -211,6 +211,7 @@ const styles = theme => ({
 		...theme.typography.body2,
 		display: "inline-block"
 	},
+
 	title: {
 		...theme.typography.h6,
 		color: theme.palette.text.secondary,
@@ -268,13 +269,15 @@ const CellBase = React.memo(({ classes, startDate, formatDate, otherMonth }) => 
 			tabIndex={0}
 			className={classNames({
 				[classes.cell]: true,
-				[classes.rainBack]: iconId === 0,
-				[classes.sunBack]: iconId === 1,
-				[classes.cloudBack]: iconId === 2,
+				// [classes.rainBack]: iconId === 0,
+				// [classes.sunBack]: iconId === 1,
+				// [classes.cloudBack]: iconId === 2,
 				[classes.opacity]: otherMonth
 			})}>
 			<div className={classes.content}></div>
-			<WeatherIcon classes={classes} id={iconId} />
+			{
+				//<WeatherIcon classes={classes} id={iconId} />
+			}
 			<div className={classes.text}>{formatDate(startDate, formatOptions)}</div>
 		</TableCell>
 	);
@@ -292,13 +295,13 @@ const AppointmentContent = withStyles(styles, { name: "AppointmentContent" })(({
 
 const FlexibleSpace = withStyles(styles, { name: "ToolbarRoot" })(({ classes, ...restProps }) => (
 	<Toolbar.FlexibleSpace {...restProps} className={classes.flexibleSpace}>
-		<div className={classes.flexContainer}>
+		{/* <div className={classes.flexContainer}>
 			<Icon />
 			<ColorLens fontSize="large" htmlColor="#007bff" />
 			<Typography variant="h5" style={{ marginLeft: "10px" }}>
 				Nemeos Calendar
 			</Typography>
-		</div>
+		</div> */}
 	</Toolbar.FlexibleSpace>
 ));
 

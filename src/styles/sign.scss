@@ -3,30 +3,32 @@
 */
 body {
     margin: 0;
-    // color: #6a6f8c;
+    //color: #6a6f8c;
     color: #fff;
     background: #c8c8c8;
     font: 600 16px/18px 'Oxygen', sans-serif;
 }
 
-.login-box {
-    width: 100%;
-    margin: auto;
-    padding: 0;
-    // max-width: 525px;
-    // min-height: 670px;
-    position: relative;
-    background: url(https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260) no-repeat center;
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
-}
+// .login-box {
+//     width: 100%;
+//     margin: auto;
+//     padding: 0;
+//     // max-width: 525px;
+//     // min-height: 670px;
+//     position: relative;
+//     //background: url(https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260) no-repeat center;
+//     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
+// }
 
 .login-snip {
     width: 100%;
     height: 100%;
+    margin-bottom: 10rem;
     position: relative;
-    padding: 90px 70px 50px 70px;
+    padding: 70px 70px 50px 70px;
     // background: rgba(0, 77, 77, .9)
-    background: rgba(10, 46, 82, .6)
+    background: rgba(10, 46, 82, .6);
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
 }
 
 .login-snip .login,
@@ -51,7 +53,7 @@ body {
 .login-space .group .label,
 .login-space .group .button {
     text-transform: uppercase;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .login-space .group .check-signed-in{
@@ -107,8 +109,13 @@ body {
 }
 
 .login-space .group .label {
-    color: #aaa;
+    color: white;
     font-size: 12px
+}
+
+.subtext{
+    color: white;
+    margin: 1.5rem;
 }
 
 .login-space .group .button {
@@ -132,7 +139,7 @@ body {
     height: 2px;
     background: #fff;
     position: absolute;
-    transition: all .2s ease-in-out 0s
+    transition: all .2s ease-in-out ;
 }
 
 .login-space .group label .icon:before {
@@ -149,7 +156,7 @@ body {
 }
 
 .login-space .group .check:checked+label {
-    color: #fff
+    color: white;
 }
 
 .login-space .group .check:checked+label .icon {

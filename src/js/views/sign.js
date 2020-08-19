@@ -52,7 +52,7 @@ export class Sign extends React.Component {
 														placeholder="Enter your email"
 														onChange={e => this.setState({ email: e.target.value })}
 													/>
-													<small id="emailHelp" className="form-text text-muted">
+													<small id="emailHelp" className="subtext">
 														Well never share your email with anyone else.
 													</small>
 												</div>
