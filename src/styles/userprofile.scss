@@ -1,0 +1,170 @@
+$margin: 32px;
+$margin-vertical: $margin * 0.85;
+
+$col-secondary: #ed4e7c;
+$col-primary: #005b9f;
+
+$content-width: 480px;
+$banner-height: 200px;
+
+%text-big {
+	font-size: 1.5em;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	
+	background-color: #346271;
+	background-image: radial-gradient(ellipse 720px 100% at top center,#2295ca,#007ecb);
+	background-attachment: fixed;
+}
+
+p {
+	line-height: 1.45;
+}
+
+h1 {
+	@extend %text-big;
+	margin-bottom: 0.5em;
+	font-weight: 400;
+}
+
+.location {
+	@extend %text-big;
+}
+
+h2 {
+	@extend %text-big;
+	
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+.button {
+	padding: 0.5em 1.5em;
+	
+	font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+	
+	border: 1px solid;
+	border-radius: 0.5em;
+	cursor: pointer;
+	
+	transition: background 0.2s, color 0.2s;
+	
+	&:hover {
+		background: white;
+		color: $col-primary;
+	}
+}
+
+.main {
+	width: $content-width;
+	margin: 70px auto;
+	
+	color: white;
+	
+	background: rgba(#6eaecf, 0.15);
+}
+
+.banner {
+	box-sizing: border-box;
+	height: $banner-height;
+}
+
+.banner-content {
+	box-sizing: border-box;
+	width: ($content-width - $banner-height) / 2;
+	height: 100%;
+	position: relative;
+	padding: $margin-vertical $margin;
+	float: right;
+	
+	text-align: right;
+	
+	background: $col-primary;
+	
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 99%;
+		top: 0;
+		border-style: solid;
+		border-color: transparent;
+		border-right-color: $col-primary;
+		border-width: 0 $banner-height $banner-height $banner-height;
+		z-index: 0;
+	}
+	
+	&>* {
+		z-index: 1;
+		position: relative;
+		float: right;
+	}
+	
+	&>*:nth-child(1) {
+		width: 300%;
+		float: right;
+	}
+	
+	&>*:nth-child(2) {
+		width: 260%;
+	}
+}
+
+.banner-button {
+	position: absolute;
+	bottom: $margin;
+	right: $margin;
+}
+
+.tabs {
+	display: flex;
+	flex-direction: row;
+}
+
+.tab {
+	flex-grow: 1;
+
+	text-align: center;
+	font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+	font-weight: 300;
+	
+	a {
+		display: block;
+		padding: $margin;
+		
+		cursor: pointer;
+	}
+	
+	&:hover,
+	&.selected {
+		color: $col-primary;
+	}
+}
+
+.tab-panes {
+	padding: 0 $margin $margin;
+}
+
+.skills-radar {
+	width: 90%;
+	height: 300px;
+	margin: 0 auto;
+	display: block;
+}
+
+// Nothing but data URL after this
+.banner {
+	background-image: url('https://avatars0.githubusercontent.com/u/50187944?s=460&u=e29edb88f400e6e37db56e394a5759f398d9c13d&v=4');
+    background-position: -500% 0%;
+    background-repeat: no-repeat;
+   
+}

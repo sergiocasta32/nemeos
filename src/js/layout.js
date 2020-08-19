@@ -8,29 +8,35 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
+
 import { Footer } from "./component/footer";
+import { Demo1 } from "./component/demo1";
+import { DemoChart } from "./component/demochart";
+import { LoginSergio } from "./component/loginsergio";
+import { DashBoard } from "./component/dashBoard";
+import { Sign } from "./views/sign";
+import { SignUpForm } from "./views/signUpForm";
+import { UserProfileView } from "./views/userprofileview";
+import { PieChartView } from "./views/pieChartView";
+import { Nav } from "./component/navbarmenu";
 
 //create your first component
 export const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	const basename = process.env.BASENAME || "";
-
 	return (
-		<div className="d-flex flex-column h-100">
-			<BrowserRouter basename={basename}>
-				<ScrollToTop>
-					<Navbar />
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route path="/demo" component={Demo} />
-						<Route path="/single/:theid" component={Single} />
-						<Route render={() => <h1>Not found!</h1>} />
-					</Switch>
-					<Footer />
-				</ScrollToTop>
-			</BrowserRouter>
-		</div>
+		<BrowserRouter basename={basename}>
+			<ScrollToTop>
+				<Switch>
+					<Route exact path="/" component={Sign} />
+					<Route path="/signUpForm" component={SignUpForm} />
+					<Route path="/dashBoard" component={DashBoard} />
+					<Route path="/userprofileview" component={UserProfileView} />
+					<Route path="/pieChartView" component={PieChartView} />
+				</Switch>
+			</ScrollToTop>
+		</BrowserRouter>
 	);
 };
 

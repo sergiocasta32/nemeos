@@ -1,0 +1,240 @@
+/* 
+    General Styles
+*/
+#form-view{
+    
+    .form-box {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        position: relative;
+        background: url(https://images.pexels.com/photos/258510/pexels-photo-258510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center;
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+    }
+    
+.form-snip {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 90px 70px 50px 70px;
+    // background: rgba(0, 77, 77, .9)
+    background: rgba(10, 46, 82, .6)
+}
+
+    .form-space {
+        min-height: 345px;
+        position: relative;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+    
+    .form-space .form-group {
+        margin-bottom: 15px
+    }
+    
+    .form-space .form-group .form-label,
+    .form-space .form-group input,
+    .form-space .form-group .button {
+        width: 100%;
+        color: #fff;
+        display: block;
+        margin-bottom: 20px
+    }
+    .form-space .form-group select{
+         width: 100%;
+        display: block;
+        color: #fff;
+        margin-bottom: 20px;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, .1)
+    }
+    .form-space .form-group option{
+         width: 100%;
+        display: block;
+        color: black;
+    }
+    
+    .form-space .form-group input,
+    .form-space .form-group .button {
+        border: none;
+        padding: 15px 20px;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, .1)
+    }
+    
+    .form-space .form-group input[data-type="password"] {
+        text-security: circle;
+        -webkit-text-security: circle
+    }
+    
+    .form-space .form-group .form-label {
+        color: #aaa;
+        font-size: 12px
+    }
+    
+    .form-space .form-group .button {
+        background: #03A9F4
+    }
+
+    
+    .form-space .form-group label .icon {
+        width: 15px;
+        height: 15px;
+        border-radius: 2px;
+        position: relative;
+        display: inline-block;
+        background: rgba(255, 255, 255, .1)
+    }
+    
+    .form-space .form-group label .icon:before,
+    .form-space .form-group label .icon:after {
+        content: '';
+        width: 10px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        transition: all .2s ease-in-out 0s
+    }
+    
+    .form-space .form-group label .icon:before {
+        left: 3px;
+        width: 5px;
+        bottom: 6px;
+        transform: scale(0) rotate(0)
+    }
+    
+    .form-space .form-group label .icon:after {
+        top: 6px;
+        right: 0;
+        transform: scale(0) rotate(0)
+    }
+    
+    .form-space .form-group .check:checked+label {
+        color: #fff
+    }
+    
+    .form-space .form-group .check:checked+label .icon {
+        background: #1161ee
+    }
+    
+    .form-space .form-group .check:checked+label .icon:before {
+        transform: scale(1) rotate(45deg)
+    }
+    
+    .form-space .form-group .check:checked+label .icon:after {
+        transform: scale(1) rotate(-45deg)
+    }
+    
+    .login-snip .sign-in:checked+.tab+.sign-up+.tab+.form-space .form-data {
+        transform: rotate(0)
+    }
+    
+    .login-snip .sign-up:checked+.tab+.form-space .sign-up-form {
+        transform: rotate(0)
+    }
+    
+    *,
+    :after,
+    :before {
+        box-sizing: border-box
+    }
+    
+    .clearfix:after,
+    .clearfix:before {
+        content: '';
+        display: table
+    }
+    
+    .clearfix:after {
+        clear: both;
+        display: block
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: none
+    }
+    
+    ul.social-network {
+        list-style: none;
+        display: inline;
+        margin-left: 0 !important;
+        padding: 0;
+    }
+    
+    ul.social-network li {
+        display: inline;
+        margin: 0 5px
+    }
+    
+    .social-network a.icoFacebook:hover {
+        background-color: #3B5998
+    }
+    
+    .social-network a.icoTwitter:hover {
+        background-color: #33ccff
+    }
+    
+    .social-network a.icoGoogle:hover {
+        background-color: #BD3518
+    }
+    
+    .social-network a.icoFacebook:hover i,
+    .social-network a.icoTwitter:hover i,
+    .social-network a.icoGoogle:hover i {
+        color: #fff
+    }
+    
+    a.socialIcon:hover,
+    .socialHoverClass {
+        color: #44BCDD
+    }
+    
+    .social-circle li a {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto 0 auto;
+        border-radius: 50%;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        font-size: 20px
+    }
+    
+    .social-circle li i {
+        margin: 0;
+        line-height: 50px;
+        text-align: center
+    }
+    
+    .social-circle li a:hover i,
+    .triggeredHover {
+        transform: rotate(360deg);
+        transition: all 0.2s
+    }
+    
+    .social-circle i {
+        color: #fff;
+        transition: all 0.8s;
+        transition: all 0.8s;
+    }
+    
+    .hr {
+        height: 2px;
+        margin: 20px 0 20px 0;
+        background: rgba(189, 189, 189, .2)
+    }
+    
+    .foot {
+        text-align: center
+    }
+    
+    .card {
+        width: 500px;
+        left: 100px
+    }
+    
+    ::placeholder {
+        color: #b3b3b3
+    }
+}

@@ -1,0 +1,26 @@
+/* 
+    General Styles
+*/
+
+.divdashboard{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.divchart{
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.divpiechart {
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+@media (min-width: 600px) {
+    .MuiToolbar-gutters{
+        padding-right: 50px !important;
+    }
+}    
