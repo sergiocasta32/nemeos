@@ -138,8 +138,8 @@ h2 {
 	font-weight: 300;
 	
 	a {
-		display: block;
-		padding: $margin;
+		display: flex;
+		padding: 20px 0px 20px 0px;
 		
 		cursor: pointer;
 	}

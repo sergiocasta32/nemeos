@@ -17,50 +17,28 @@ const getState = ({ getStore, setStore }) => {
 				}
 			],
 			dataProfile: {
-				dataOverview: {
+				dataPersonality: {
+					labels: ["Perseverancia", "Valentía", "Dedicación", "Esfuerzo", "Tolerancia al dolor"],
+					datasets: [
+						{
+							data: [80, 80, 100, 100, 60],
+							fillColor: "transparent",
+							strokeColor: "#ed4e7c",
+							pointColor: "#ed4e7c"
+						}
+					]
+				},
+				dataMotivation: {
 					labels: [
-						"Intusion Prevention",
-						"Bug Detection",
-						"Computer Forensics",
-						"Network Security",
-						"Code Retirement"
+						"Forma física/habilidad",
+						"Refuerzos extrínsecos",
+						"Factor equipo",
+						"Amigos/diversión",
+						"Descarga de energía"
 					],
 					datasets: [
 						{
-							data: [90, 70, 50, 35, 80],
-							fillColor: "transparent",
-							strokeColor: "#ed4e7c",
-							pointColor: "#ed4e7c"
-						}
-					]
-				},
-				dataSkills: {
-					labels: ["Data1", "Data2", "Data3", "Data4", "Data5"],
-					datasets: [
-						{
-							data: [10, 20, 30, 40, 50],
-							fillColor: "transparent",
-							strokeColor: "#ed4e7c",
-							pointColor: "#ed4e7c"
-						}
-					]
-				},
-				dataProjects: {
-					labels: ["Data6", "Data7", "Data8", "Data9", "Data10"],
-					datasets: [
-						{
-							data: [20, 30, 40, 50, 60],
-							fillColor: "transparent",
-							strokeColor: "#ed4e7c",
-							pointColor: "#ed4e7c"
-						}
-					]
-				},
-				dataContact: {
-					labels: ["Data11", "Data12", "Data13", "Data14", "Data15"],
-					datasets: [
-						{
-							data: [50, 60, 70, 80, 90],
+							data: [100, 20, 80, 80, 100],
 							fillColor: "transparent",
 							strokeColor: "#ed4e7c",
 							pointColor: "#ed4e7c"

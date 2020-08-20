@@ -1,10 +1,25 @@
-import React, { Component, useContext, getStore } from "react";
+import React, { Component, useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { Nav } from "../component/navbarmenu";
 import "../../styles/userprofile.scss";
 
 export const UserProfile = () => {
 	const { store, actions } = useContext(Context);
+	const [header, setHeader] = React.useState("");
+
+	var radarOpts = {
+		pointLabelFontFamily: "'Roboto Condensed', 'Roboto', sans-serif",
+		pointLabelFontStyle: "300",
+		pointLabelFontSize: 14,
+		pointLabelFontColor: "white",
+		pointDotRadius: 4,
+		angleLineColor: "rgba(255,255,255,0.1)",
+		scaleLineColor: "rgba(255,255,255,0.1)",
+		scaleOverride: true,
+		scaleSteps: 2,
+		scaleStepWidth: 50,
+		showTooltips: false
+	};
 
 	function ready(fn) {
 		if (document.readyState != "loading") {
@@ -15,47 +30,31 @@ export const UserProfile = () => {
 	}
 
 	ready(function() {
-		console.log("Estoy aqui linea 11");
-
-		var radarOpts = {
-			pointLabelFontFamily: "'Roboto Condensed', 'Roboto', sans-serif",
-			pointLabelFontStyle: "300",
-			pointLabelFontSize: 14,
-			pointLabelFontColor: "white",
-			pointDotRadius: 4,
-			angleLineColor: "rgba(255,255,255,0.1)",
-			scaleLineColor: "rgba(255,255,255,0.1)",
-			scaleOverride: true,
-			scaleSteps: 2,
-			scaleStepWidth: 50,
-			showTooltips: false
-		};
+		document.getElementById("header-tab").innerText = "Personalidad";
 
 		var ctx = document.getElementById("skills-radar").getContext("2d");
-		new Chart(ctx).Radar(store.dataProfile.dataOverview, radarOpts);
+		new Chart(ctx).Radar(store.dataProfile.dataPersonality, radarOpts);
 	});
 
 	function chart() {
-		// TODO: Aqui se debe de analizar desde donde sellama a esta funcion "id" y hacer la llamada a la funcion ready pasandole el store del tipo de dato a mostrar ya almacenado en una variable
+		var data = "";
 
-		console.log("Estoy aqui linea 11");
+		if (event.srcElement.id == "personality") {
+			data = store.dataProfile.dataPersonality;
+		} else if (event.srcElement.id == "motivation") {
+			data = store.dataProfile.dataMotivation;
+		} else if (event.srcElement.id == "projects") {
+			data = store.dataProfile.dataProjects;
+		} else {
+			data = store.dataProfile.dataContact;
+		}
 
-		var radarOpts = {
-			pointLabelFontFamily: "'Roboto Condensed', 'Roboto', sans-serif",
-			pointLabelFontStyle: "300",
-			pointLabelFontSize: 14,
-			pointLabelFontColor: "white",
-			pointDotRadius: 4,
-			angleLineColor: "rgba(255,255,255,0.1)",
-			scaleLineColor: "rgba(255,255,255,0.1)",
-			scaleOverride: true,
-			scaleSteps: 2,
-			scaleStepWidth: 50,
-			showTooltips: false
-		};
+		const value = event.srcElement.outerText;
+
+		document.getElementById("header-tab").innerText = value;
 
 		var ctx = document.getElementById("skills-radar").getContext("2d");
-		var radar = new Chart(ctx).Radar(store.dataProfile.dataProjects, radarOpts);
+		new Chart(ctx).Radar(data, radarOpts);
 	}
 
 	return (
@@ -69,22 +68,20 @@ export const UserProfile = () => {
 			</div>
 			<div className="content">
 				<ul className="tabs">
-					<li className="tab selected">
-						<a onClick={chart}>Overview</a>
+					<li className="tab">
+						<a id="personality" onClick={chart}>
+							Personalidad
+						</a>
 					</li>
 					<li className="tab">
-						<a onClick={chart}>Skills</a>
-					</li>
-					<li className="tab">
-						<a onClick={chart}>Projects</a>
-					</li>
-					<li className="tab">
-						<a onClick={chart}>Contact</a>
+						<a id="motivation" onClick={chart}>
+							Motivación
+						</a>
 					</li>
 				</ul>
 				<div className="tab-panes">
 					<div className="tab-pane">
-						<h2>Skills</h2>
+						<h2 id="header-tab">{header}</h2>
 						<canvas className="skills-radar" id="skills-radar"></canvas>
 						<h2>Bio</h2>
 						<p>blablabla</p>
