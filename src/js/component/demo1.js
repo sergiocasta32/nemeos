@@ -35,12 +35,10 @@ const appointments = [
 	{
 		id: 0,
 		title: "AB Intervals",
-		price: 5,
 		startDate: new Date(2020, 7, 7, 9, 30),
 		endDate: new Date(2020, 7, 7, 10, 0),
 		ownerId: 1,
-		exerciseId: 1,
-		exerciseId: 2
+		exerciseId: 1
 	},
 	{
 		id: 1,
@@ -115,6 +113,7 @@ const resources = [
 	{
 		fieldName: "exerciseId",
 		title: "Exercises",
+		allowMultiple: true,
 		instances: exercises
 	}
 ];

@@ -215,21 +215,9 @@ export const priorities = [
 	{ id: 3, text: "High Priority", color: deepOrange }
 ];
 export const exercises = [
-	{
-		text: "Lounge",
-		id: 1,
-		color: "#7E57C2"
-	},
-	{
-		text: "Squad",
-		id: 2,
-		color: "#7E57C2"
-	},
-	{
-		text: "Burpees",
-		id: 1,
-		color: "#7E57C2"
-	}
+	{ id: "1", text: "Lounge", color: "#7E57C2" },
+	{ id: "2", text: "Squad", color: "#7E57C2" },
+	{ id: "3", text: "Burpees", color: "#7E57C2" }
 ];
 
 export const owners = [
