@@ -19,7 +19,8 @@ import {
 	AppointmentForm,
 	EditRecurrenceMenu,
 	Resources,
-	DragDropProvider
+	DragDropProvider,
+	TodayButton
 } from "@devexpress/dx-react-scheduler-material-ui";
 import WbSunny from "@material-ui/icons/WbSunny";
 import FilterDrama from "@material-ui/icons/FilterDrama";
@@ -27,6 +28,7 @@ import Opacity from "@material-ui/icons/Opacity";
 import ColorLens from "@material-ui/icons/FitnessCenter";
 import { withStyles } from "@material-ui/core/styles";
 import { owners } from "./demo-data/tasks";
+import { exercises } from "./demo-data/tasks";
 import { Icon, CardActionArea } from "@material-ui/core";
 
 const appointments = [
@@ -34,10 +36,11 @@ const appointments = [
 		id: 0,
 		title: "AB Intervals",
 		price: 5,
-		exercises: ["cardio", "pesas"],
 		startDate: new Date(2020, 7, 7, 9, 30),
 		endDate: new Date(2020, 7, 7, 10, 0),
-		ownerId: 1
+		ownerId: 1,
+		exerciseId: 1,
+		exerciseId: 2
 	},
 	{
 		id: 1,
@@ -108,6 +111,11 @@ const resources = [
 		fieldName: "ownerId",
 		title: "Owners",
 		instances: owners
+	},
+	{
+		fieldName: "exerciseId",
+		title: "Exercises",
+		instances: exercises
 	}
 ];
 
@@ -354,6 +362,7 @@ export class Demo1 extends React.PureComponent {
 					<Resources data={resources} />
 
 					<Toolbar flexibleSpaceComponent={FlexibleSpace} />
+					<TodayButton />
 					<ViewSwitcher />
 					<DateNavigator />
 

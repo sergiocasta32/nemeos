@@ -30,7 +30,8 @@ export const UserProfile = () => {
 	}
 
 	ready(function() {
-		document.getElementById("header-tab").innerText = "Personalidad";
+		//document.getElementById("header-tab").innerText = "Personalidad";
+		console.log("----->: " + store.userloged);
 
 		var ctx = document.getElementById("skills-radar").getContext("2d");
 		new Chart(ctx).Radar(store.dataProfile.dataPersonality, radarOpts);
@@ -61,7 +62,7 @@ export const UserProfile = () => {
 		<div className="main">
 			<div className="banner">
 				<div className="banner-content">
-					<h1>Rick Deckard</h1>
+					<h1>ey ey</h1>
 					<div className="location">Los Angeles, CA</div>
 					<a className="button banner-button">Connect</a>
 				</div>
